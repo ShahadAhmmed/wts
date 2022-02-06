@@ -1,0 +1,176 @@
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(9946) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(9952) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(24132) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(24133) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(24647) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(24648) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(25511) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(25554) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(25803) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(25804) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(33195) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(33723) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(35118) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(35217) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(36816) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(36928) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(37237) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(38080) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(40845) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(40850) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(42613) : ïðåäóïðåæäåíèå 213: íåñîâïàäåíèå òèïîâ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(45112) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(45134) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(51660) : ïðåäóïðåæäåíèå 213: íåñîâïàäåíèå òèïîâ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(51670) : ïðåäóïðåæäåíèå 213: íåñîâïàäåíèå òèïîâ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(51680) : ïðåäóïðåæäåíèå 213: íåñîâïàäåíèå òèïîâ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(51690) : ïðåäóïðåæäåíèå 213: íåñîâïàäåíèå òèïîâ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(51700) : ïðåäóïðåæäåíèå 213: íåñîâïàäåíèå òèïîâ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(51710) : ïðåäóïðåæäåíèå 213: íåñîâïàäåíèå òèïîâ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(63700) : èäåíòèôèêàòîðó ïðèñâîåíî çíà÷åíèå, íî îí íå èñïîëüçóåòñÿ: "string"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64452) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64459) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64463) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64470) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64503) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64510) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64514) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64521) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64528) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64529) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64538) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64538) : ïðåäóïðåæäåíèå 202: êîëè÷åñòâî àðãóìåíòîâ íå ñîâïàäàåò ñ îáúÿâëåíèåì
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64540) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64565) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64566) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64553) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "count"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64645) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64649) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64656) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64692) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64699) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64703) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64710) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64715) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64716) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64738) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64742) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64753) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64760) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64764) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(64765) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(66256) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(66248) : èäåíòèôèêàòîðó ïðèñâîåíî çíà÷åíèå, íî îí íå èñïîëüçóåòñÿ: "str"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(69764) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(69770) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(73123) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(73127) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(89418) : èäåíòèôèêàòîðó ïðèñâîåíî çíà÷åíèå, íî îí íå èñïîëüçóåòñÿ: "color"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(95123) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(95124) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(98985) : ïðåäóïðåæäåíèå 219: ïåðåìåííàÿ "i" óæå îáúÿâëåíà â áîëåå ãëîáàëüíîé çîíå âèäèìîñòè
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(98985) : èäåíòèôèêàòîðó ïðèñâîåíî çíà÷åíèå, íî îí íå èñïîëüçóåòñÿ: "i"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(98985) -- (98993) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(98998) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(104508) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(104509) : ïðåäóïðåæäåíèå 225: íåäîñòèæèìûé êîä
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(104509) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(105630) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(110787) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(110855) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(110887) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(110897) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(110931) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(111025) : íåïðàâèëüíàÿ òàáóëÿöèÿ
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(111034) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "BankTextdraw"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(10032) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "GetFleecaRobbers"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(1281) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "HidingOrNot"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(533) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "HungerBar"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(6687) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "IsStorerob"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(584) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "PD_door_status_1ls"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(598) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "PD_door_status_1lv"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(591) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "PD_door_status_1sf"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(585) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "PD_door_status_2ls"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(599) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "PD_door_status_2lv"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(592) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "PD_door_status_2sf"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(586) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "PD_door_status_3ls"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(600) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "PD_door_status_3lv"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(593) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "PD_door_status_3sf"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(581) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "PD_obj_door_1ls"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(595) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "PD_obj_door_1lv"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(588) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "PD_obj_door_1sf"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(582) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "PD_obj_door_2ls"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(596) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "PD_obj_door_2lv"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(589) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "PD_obj_door_2sf"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(583) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "PD_obj_door_3ls"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(597) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "PD_obj_door_3lv"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(590) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "PD_obj_door_3sf"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(1284) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "PriorityTD1"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(1285) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "PriorityTD2"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(1286) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "PriorityTD3"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(1287) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "PriorityTD4"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(569) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "SMI_door_1"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(570) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "SMI_door_2"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(571) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "SMI_door_status_1"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(572) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "SMI_door_status_2"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(1282) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "Textdraw3"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(534) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "ThirstBar"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(551) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "ashint_door"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(552) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "ashint_door_status"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(550) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "auth_objs"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(543) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "bolkals"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(523) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "bolkalv_veh"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(523) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "bolkasf_veh"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(529) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "boost_lspdcar"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(532) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "boost_lvpdcar"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(530) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "boost_sfpdcar"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(528) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "boost_veh_lvl"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(555) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "bpost"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(528) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "braking_veh_lvl"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(525) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "bulletboostls"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(527) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "bulletboostlv"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(526) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "bulletboostsf"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(519) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "faggio_bomj"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(562) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "fbi_door_1"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(563) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "fbi_door_2"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(564) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "fbi_door_3"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(565) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "fbi_door_4"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(566) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "fbi_door_5"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(567) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "fbi_door_6"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(556) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "fbi_door_status_1"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(557) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "fbi_door_status_2"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(558) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "fbi_door_status_3"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(559) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "fbi_door_status_4"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(560) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "fbi_door_status_5"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(561) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "fbi_door_status_6"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(521) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "fbicar"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(602) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "gateobj"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(542) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "jailcars"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(539) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "koyka_used_ls"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(541) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "koyka_used_lv"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(540) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "koyka_used_sf"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(577) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "maf_door_status_1"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(578) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "maf_door_status_2"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(579) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "maf_door_status_3"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(574) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "maf_obj_door_1"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(575) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "maf_obj_door_2"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(576) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "maf_obj_door_3"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(547) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "mark3d"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(545) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "markauto"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(546) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "markcarid"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(554) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "mayak"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(536) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "meriyalscar"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(538) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "meriyalvcar"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(537) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "meriyasfcar"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(517) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "minefirstlift"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(518) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "minesecondlift"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(535) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "ministrcar"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(549) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "new_logo"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(520) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "prodworker"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(522) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "veh_bus"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(522) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "veh_taxi"
+C:\Users\HELEENA\Desktop\tgcin\gamemodes\mgrp.pwn(524) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "vvcveh"
+Pawn compiler 3.2.3664	 	 	Copyright (c) 1997-2016, ITB CompuPhase
+
+
+Ïðåäóïðåæäåíèé:10.
