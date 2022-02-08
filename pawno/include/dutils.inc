@@ -125,26 +125,7 @@ stock Now() {
 }
 
 
-/**
- *  Return the value of an hex-string
- *  @param string
- */
-stock HexToInt(string[]) {
-  if (string[0]==0) return 0;
-  new i;
-  new cur=1;
-  new res=0;
-  for (i=strlen(string);i>0;i--) {
-    if (string[i-1]<58) res=res+cur*(string[i-1]-48); else res=res+cur*(string[i-1]-65+10);
-    cur=cur*16;
-  }
-  return res;
-}
 
-/**
- *  Return the int as string
- *  @param   number
- */
 stock IntToHex(number)
 {
 	new m=1;

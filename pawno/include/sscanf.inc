@@ -1,4 +1,36 @@
-#include <a_samp>
+/*----------------------------------------------------------------------------*-
+Function:
+	sscanf
+Params:
+	string[] - String to extract parameters from.
+	format[] - Parameter types to get.
+	{Float,_}:... - Data return variables.
+Return:
+	0 - Successful, not 0 - fail.
+Notes:
+	A fail is either insufficient variables to store the data or insufficient
+	data for the format string - excess data is disgarded.
+
+	A string in the middle of the input data is extracted as a single word, a
+	string at the end of the data collects all remaining text.
+
+	The format codes are:
+
+	c - A character.
+	d, i - An integer.
+	h, x - A hex number (e.g. a colour).
+	f - A float.
+	s - A string.
+	z - An optional string.
+	pX - An additional delimiter where X is another character.
+	'' - Encloses a litteral string to locate.
+	u - User, takes a name, part of a name or an id and returns the id if they're connected.
+
+	Now has IsNumeric integrated into the code.
+
+	Added additional delimiters in the form of all whitespace and an
+	optioanlly specified one in the format string.
+-*----------------------------------------------------------------------------*/
 
 stock sscanf(string[], format[], {Float,_}:...)
 {

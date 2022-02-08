@@ -16,14 +16,6 @@ ReturnUser(text[], playerid = INVALID_PLAYER_ID)
 		pos++;
 	}
 	new userid = INVALID_PLAYER_ID;
-    //if(userid < 0 || userid > 500)
-    //{
-        //return 1;
-    //}
-    //if(strlen(text) > 49)
-	//{
-	    //return 1;
-	//}
 	if (IsNumeric(text[pos])) // Check whole passed string
 	{
 		// If they have a numeric name you have a problem (although names are checked on id failure)

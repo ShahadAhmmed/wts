@@ -247,7 +247,7 @@ private
 
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 
-DOF2::Exit ()
+stock DOF2::Exit ()
 	DOF2::WriteFile ();
 
 stock DOF2::SetUTF8 (bool: set)
@@ -386,11 +386,11 @@ stock DOF2::RemoveSection (file [], tag [])
 		new
 		#if PACK_CONTENT == true
 		    line [MAX_LINE_SIZE],
-		    buf [MAX_SECTION_TAG],
 		#endif
+		    buf [MAX_SECTION_TAG],
 			section = INVALID_SECTION,
 			entry,
-			key [MAX_KEY_SIZE];
+			key [MAX_LINE_SIZE];
 
 	    for (new i = 1; i < Sections.Count; ++i)
 	    {

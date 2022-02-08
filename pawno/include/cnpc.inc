@@ -106,6 +106,8 @@ native GetNPCVehicleWeapon(npcid);
 native NPC_WalkTo(npcid,Float:X,Float:Y,Float:Z,is_z_map);
 native NPC_RunTo(npcid,Float:X,Float:Y,Float:Z,is_z_map);
 native NPC_SprintTo(npcid,Float:X,Float:Y,Float:Z,is_z_map);
+native NPC_CrouchTo(npcid,Float:X,Float:Y,Float:Z,is_z_map);
+native NPC_Jump(npcid);
 native NPC_LookAt(npcid,Float:X,Float:Y,Float:Z);
 native NPC_AimAt(npcid,Float:X,Float:Y,Float:Z);
 native NPC_ShotAt(npcid,Float:X,Float:Y,Float:Z);

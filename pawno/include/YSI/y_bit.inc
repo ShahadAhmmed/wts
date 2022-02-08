@@ -1,4 +1,4 @@
-/*----------------------------------------------------------------------------*\
+/*----------------------------------------------------------------------------*-
 					===========================
 					Y Sever Includes - Bit Core
 					===========================
@@ -23,17 +23,17 @@ Legal:
 	for the specific language governing rights and limitations under the
 	License.
 	
-	The Original Code is the YSI bit include.
+	The Original Code is the SA:MP script information include.
 	
 	The Initial Developer of the Original Code is Alex "Y_Less" Cole.
-	Portions created by the Initial Developer are Copyright (C) 2011
+	Portions created by the Initial Developer are Copyright (C) 2008
 	the Initial Developer. All Rights Reserved.
 	
 	Contributors:
-		ZeeX, koolk, JoeBullet/Google63, g_aSlice/Slice
+		ZeeX, koolk
 	
 	Thanks:
-		JoeBullet/Google63 - Handy arbitrary ASM jump code using SCTRL.
+		Peter, Cam - Support.
 		ZeeX - Very productive conversations.
 		koolk - IsPlayerinAreaEx code.
 		TheAlpha - Danish translation.
@@ -48,17 +48,12 @@ Legal:
 		Matite - Pestering me to release it and using it.
 	
 	Very special thanks to:
-		Thiadmer - PAWN, whose limits continue to amaze me!
+		Thiadmer - PAWN.
 		Kye/Kalcor - SA:MP.
 		SA:MP Team past, present and future - SA:MP.
-	
 Version:
 	0.2
 Changelog:
-	21/10/12:
-		Changed "Bit_Display" to print in the correct order.
-	22/02/12:
-		Added the "BITS" iterator.
 	01/12/08:
 		Rewrote most of the code to use shifts and ands not divs and mods.
 	24/06/07:
@@ -107,12 +102,9 @@ Commands:
 	-
 Compile options:
 	-
-\*----------------------------------------------------------------------------*/
+-*----------------------------------------------------------------------------*/
 
-#include "internal\y_version"
-#include "y_debug"
-#include "y_utils"
-#include "y_cell"
+#include <YSI\internal\y_version>
 
 // This is redefined below, don't worry.  It's like this so the function
 // prototypes can use a familiar syntax.
@@ -132,7 +124,7 @@ Compile options:
 	#endif
 #endif
 
-/*----------------------------------------------------------------------------*\
+/*----------------------------------------------------------------------------*-
 Function:
 	Bit_Bits
 Params:
@@ -141,12 +133,11 @@ Return:
 	Number of cells required for the bit array.
 Notes:
 	-
-\*----------------------------------------------------------------------------*/
+-*----------------------------------------------------------------------------*/
 
-// If this ever changes, update the size reference in y_users.
 #define Bit_Bits(%1) (((%1)+cellbits-1)/cellbits)
 
-/*----------------------------------------------------------------------------*\
+/*----------------------------------------------------------------------------*-
 Function:
 	Bit_Slot
 Params:
@@ -155,11 +146,11 @@ Return:
 	The true array slot for this value.
 Notes:
 	-
-\*----------------------------------------------------------------------------*/
+-*----------------------------------------------------------------------------*/
 
 #define Bit_Slot(%1) ((_:%1)>>>CELLSHIFT)
 
-/*----------------------------------------------------------------------------*\
+/*----------------------------------------------------------------------------*-
 Function:
 	Bit_Mask
 Params:
@@ -168,11 +159,11 @@ Return:
 	The bit in the array slot to use.
 Notes:
 	-
-\*----------------------------------------------------------------------------*/
+-*----------------------------------------------------------------------------*/
 
 #define Bit_Mask(%1) (Bit:(1<<((_:%1)&cellbits-1)))
 
-/*----------------------------------------------------------------------------*\
+/*----------------------------------------------------------------------------*-
 Function:
 	Bit_GetBit
 Params:
@@ -182,11 +173,11 @@ Return:
 	State of the provided slot, 0 on fail.
 Notes:
 	Unsafe but faster for when you're sure you're within range.
-\*----------------------------------------------------------------------------*/
+-*----------------------------------------------------------------------------*/
 
 #define Bit_GetBit(%1,%2) (%1[(%2)>>>CELLSHIFT]&Bit:(1<<((%2)&cellbits-1)))
 
-/*----------------------------------------------------------------------------*\
+/*----------------------------------------------------------------------------*-
 Function:
 	Bit_Get
 Params:
@@ -200,11 +191,11 @@ Notes:
 
 native Bit_Get(BitArray:array<>, slot);
 
-\*----------------------------------------------------------------------------*/
+-*----------------------------------------------------------------------------*/
 
 #define Bit_Get(%1,%2) bool:Bit_GetBit(Bit:%1,_:%2)
 
-/*----------------------------------------------------------------------------*\
+/*----------------------------------------------------------------------------*-
 Function:
 	Bit_Let
 Params:
@@ -214,11 +205,11 @@ Return:
 	-
 Notes:
 	Sets the slot to 1.
-\*----------------------------------------------------------------------------*/
+-*----------------------------------------------------------------------------*/
 
 #define Bit_Let(%1,%2) %1[(%2)>>>CELLSHIFT]|=Bit:(1<<((%2)&cellbits-1))
 
-/*----------------------------------------------------------------------------*\
+/*----------------------------------------------------------------------------*-
 Function:
 	Bit_Vet
 Params:
@@ -228,11 +219,11 @@ Return:
 	-
 Notes:
 	Sets the slot to 0.
-\*----------------------------------------------------------------------------*/
+-*----------------------------------------------------------------------------*/
 
 #define Bit_Vet(%1,%2) %1[(%2)>>>CELLSHIFT]&=Bit:~(1<<((%2)&cellbits-1))
 
-/*----------------------------------------------------------------------------*\
+/*----------------------------------------------------------------------------*-
 Function:
 	Bit_Set
 Params:
@@ -247,18 +238,16 @@ Notes:
 
 native Bit_Set(BitArray:array<>, slot, bool:set, size = sizeof (array));
 
-\*----------------------------------------------------------------------------*/
+-*----------------------------------------------------------------------------*/
 
-stock Bit_Set(BitArray:array<>, slot, bool:set)//, size = sizeof (array))
+stock Bit_Set(BitArray:array<>, slot, bool:set, size = sizeof (array))
 {
-	//if (slot >>> CELLSHIFT >= size) return;
+	if (slot >>> CELLSHIFT >= size) return;
 	if (set) Bit_Let(array, slot);
 	else Bit_Vet(array, slot);
 }
 
-//#define Bit_Set(%0,%1,%2) ((%2)?Bit_Let(%0,(%1)):Bit_Vet(%0,(%1)))
-
-/*----------------------------------------------------------------------------*\
+/*----------------------------------------------------------------------------*-
 Function:
 	Bit_SetAll
 Params:
@@ -272,7 +261,7 @@ Notes:
 
 native Bit_SetAll(BitArray:array<>, bool:set, size = sizeof (array));
 
-\*----------------------------------------------------------------------------*/
+-*----------------------------------------------------------------------------*/
 
 stock Bit_SetAll(BitArray:array<>, bool:set, size = sizeof (array))
 {
@@ -281,7 +270,7 @@ stock Bit_SetAll(BitArray:array<>, bool:set, size = sizeof (array))
 	for (new i = 0; i != size; ++i) array[i] = val;
 }
 
-/*----------------------------------------------------------------------------*\
+/*----------------------------------------------------------------------------*-
 Function:
 	Bit_GetCount
 Params:
@@ -295,9 +284,8 @@ Notes:
 
 native Bit_Count(BitArray:array<>, size = sizeof (array));
 
-\*----------------------------------------------------------------------------*/
+-*----------------------------------------------------------------------------*/
 
-#define Bit_Count Bit_GetCount
 stock Bit_GetCount(BitArray:array<>, size = sizeof (array))
 {
 	new
@@ -313,93 +301,10 @@ stock Bit_GetCount(BitArray:array<>, size = sizeof (array))
 	return count;
 }
 
-stock Bit_Display(BitArray:array<>, size = sizeof (array))
-{
-	new
-		ret[YSI_MAX_STRING],
-		val;
-	while (size--)
-	{
-		val = Cell_ReverseBits(array[size]);
-		format(ret, sizeof (ret), "%016b%016b%s", val >>> 16, val & 0xFFFF, ret);
-	}
-	P:7("Bit_Display called: %s, %i", ret, size);
-	return ret;
-}
+#define bits<%1> \
+	Bit_Bits(%1)
 
 #define bitsof(%0) (sizeof(%0)*cellbits)
-
-stock Bits@YSII_Ag(BitArray:data<>, start, size = sizeof (data))
-{
-	P:3("YSI_gABITSFunc called: %s, %i", Bit_Display(data, size), start);
-	static const
-		scDeBruijn[] =
-			{
-				0,  1,  28, 2,  29, 14, 24, 3,  30, 22, 20, 15, 25, 17, 4,  8,
-				31, 27, 13, 23, 21, 19, 16, 7,  26, 12, 18, 6,  11, 5,  10, 9
-			};
-	++start;
-	new
-		cur,
-		i = Bit_Slot(start);
-	if (i == size)
-	{
-		return -1;
-	}
-	// Blank out the lowest bits to get the lowest bit not yet used.
-	if ((cur = (_:data[i] & ~((1 << (start & (cellbits - 1))) - 1))))
-	{
-		//printf("%d %d %d %d", cur, data[i], start, ~((1 << (start & (cellbits - 1))) - 1));
-		// Bits left in the current cell.
-		return (i * cellbits) + scDeBruijn[((cur & -cur) * 0x077CB531) >>> 27];
-	}
-	++i;
-	while (i != size)
-	{
-		if ((cur = _:data[i]))
-		{
-			return (i * cellbits) + scDeBruijn[((cur & -cur) * 0x077CB531) >>> 27];
-		}
-		++i;
-	}
-	return -1;
-}
-
-stock Blanks@YSII_Ag(BitArray:data<>, start, size = sizeof (data))
-{
-	P:3("YSI_gABlanksFunc called: %s, %i", Bit_Display(data), start);
-	static const
-		scDeBruijn[] =
-			{
-				0,  1,  28, 2,  29, 14, 24, 3,  30, 22, 20, 15, 25, 17, 4,  8,
-				31, 27, 13, 23, 21, 19, 16, 7,  26, 12, 18, 6,  11, 5,  10, 9
-			};
-	//++start;
-	new
-		cur,
-		i = Bit_Slot(start);
-	if (i == size)
-	{
-		return -1;
-	}
-	if ((cur = ~(_:(data[i] & ~((1 << (start & (cellbits - 1))) - 1)))))
-	{
-		// Bits left in the current cell.
-		return (i * cellbits) + scDeBruijn[((cur & -cur) * 0x077CB531) >>> 27];
-	}
-	++i;
-	while (i != size)
-	{
-		if ((cur = ~_:data[i]))
-		{
-			return (i * cellbits) + scDeBruijn[((cur & -cur) * 0x077CB531) >>> 27];
-		}
-		++i;
-	}
-	return -1;
-}
-
-#define bits<%1> Bit_Bits(%1) 
 
 #undef BitArray
 #define BitArray:%1<%2> Bit:%1[bits<%2>]
