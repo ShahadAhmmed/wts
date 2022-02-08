@@ -1,10 +1,15 @@
 /**
  *  Progress Bar 1.3.1.0
  *  Copyright 2007-2010 Infernus' Group,
- *  Flávio Toribio (flavio_toibio@hotmail.com)
+ *  Fl?vio Toribio (flavio_toibio@hotmail.com)
+ *
+ *  Updated by Southclaw for use with the PlayerTextDraws of 0.3e
+ *  Updated again by Southclaw for some bugfixes and removal of the per-player textdraw array
+ *  Textdraw IDs are now kept in a separate array that isn't per-player, to save memory.
+ *
  */
 
-#if defined _progress_included
+#if defined _playerprogress_included
 	#endinput
 #endif
 
@@ -17,250 +22,213 @@
 
 #tryinclude <foreach>
 
-#define _progress_included
-#define _progress_version	0x1310
+#define _playerprogress_included
+#define _playerprogress_version	0x1310
 
-#define MAX_BARS				(MAX_TEXT_DRAWS / 3)
-#define INVALID_BAR_VALUE		(Float:0xFFFFFFFF)
-#define INVALID_BAR_ID			(Bar:-1)
+#define MAX_PLAYER_BARS				(MAX_PLAYER_TEXT_DRAWS / 3)
+#define INVALID_PLAYER_BAR_VALUE	(Float:0xFFFFFFFF)
+#define INVALID_PLAYER_BAR_ID		(PlayerBar:-1)
 #define pb_percent(%1,%2,%3,%4)	((%1 - 6.0) + ((((%1 + 6.0 + %2 - 2.0) - %1) / %3) * %4))
 //pb_percent(x, width, max, value)
 
 /* Pawno/Infernus Pawn Editor function list
-native Bar:CreateProgressBar(Float:x, Float:y, Float:width=55.5, Float:height=3.2, color, Float:max=100.0);
-native DestroyProgressBar(Bar:barid);
-native ShowProgressBarForPlayer(playerid, Bar:barid);
-native HideProgressBarForPlayer(playerid, Bar:barid);
-native ShowProgressBarForAll(Bar:barid);
-native HideProgressBarForAll(Bar:barid);
-native SetProgressBarValue(Bar:barid, Float:value);
-native Float:GetProgressBarValue(Bar:barid);
-native SetProgressBarMaxValue(Bar:barid, Float:max);
-native SetProgressBarColor(Bar:barid, color);
-native UpdateProgressBar(Bar:barid, playerid=INVALID_PLAYER_ID);
+native PlayerBar:CreatePlayerProgressBar(playerid, Float:x, Float:y, Float:width=55.5, Float:height=3.2, color, Float:max=100.0);
+native DestroyPlayerProgressBar(playerid, PlayerBar:barid);
+native ShowPlayerProgressBar(playerid, PlayerBar:barid);
+native HidePlayerProgressBar(playerid, PlayerBar:barid);
+native SetPlayerProgressBarValue(playerid, PlayerBar:barid, Float:value);
+native Float:GetPlayerProgressBarValue(playerid, PlayerBar:barid);
+native SetPlayerProgressBarMaxValue(playerid, PlayerBar:barid, Float:max);
+native SetPlayerProgressBarColor(playerid, PlayerBar:barid, color);
+native UpdatePlayerProgressBar(playerid, PlayerBar:barid);
 */
 
-forward Bar:CreateProgressBar(Float:x, Float:y, Float:width=55.5, Float:height=3.2, color, Float:max=100.0);
-forward Float:GetProgressBarValue(Bar:barid);
+forward PlayerBar:CreatePlayerProgressBar(playerid, Float:x, Float:y, Float:width=55.5, Float:height=3.2, color, Float:max=100.0);
+forward Float:GetPlayerProgressBarValue(playerid, PlayerBar:barid);
 
-enum e_bar
+enum E_BAR_DATA
 {
-	Float:pb_x,
-	Float:pb_y,
-	Float:pb_w,
-	Float:pb_h,
-	Float:pb_m,
-	Float:pb_v,
-	Text:pb_t1,
-	Text:pb_t2,
-	Text:pb_t3,
-	pb_color,
-	bool:pb_created
+	Float:pbar_x,
+	Float:pbar_y,
+	Float:pbar_w,
+	Float:pbar_h,
+	Float:pbar_m,
+	Float:pbar_v,
+	pbar_colour,
+	bool:pbar_valid
+}
+enum E_BAR_TEXT_DRAW
+{
+	PlayerText:pbar_textdraw1,
+	PlayerText:pbar_textdraw2,
+	PlayerText:pbar_textdraw3,
 }
 
-static Bars[MAX_BARS][e_bar];
+static
+	PlayerBars[MAX_PLAYERS][MAX_PLAYER_BARS][E_BAR_DATA],
+	PlayerBarText[MAX_PLAYER_BARS][E_BAR_TEXT_DRAW];
 
-stock Bar:CreateProgressBar(Float:x, Float:y, Float:width=55.5, Float:height=3.2, color, Float:max=100.0)
+
+stock PlayerBar:CreatePlayerProgressBar(playerid, Float:x, Float:y, Float:width=55.5, Float:height=3.2, color, Float:max=100.0)
 {
 	new
 		barid;
 
-	for(barid = 0; barid < sizeof Bars; ++barid)
-		if(!Bars[barid][pb_created]) break;
+	for(barid = 0; barid < MAX_PLAYER_BARS; ++barid) // Changed from `Bars` to `MAX_PLAYER_BARS` rather than getting the size of the second cell
+		if(!PlayerBars[playerid][barid][pbar_valid]) break;
 
-	if(Bars[barid][pb_created] || barid == sizeof Bars)
-		return INVALID_BAR_ID;
+	if(PlayerBars[playerid][barid][pbar_valid] || barid == MAX_PLAYER_BARS)
+		return INVALID_PLAYER_BAR_ID;
 
-	new Text:in_t = Bars[barid][pb_t1] = TextDrawCreate(x, y, "_");
-	TextDrawUseBox		(in_t, 1);
-	TextDrawTextSize	(in_t, x + width, 0.0);
-	TextDrawLetterSize	(in_t, 1.0, height / 10);
-	TextDrawBoxColor	(in_t, 0x00000000 | (color & 0x000000FF));
+	new PlayerText:in_t = PlayerBarText[barid][pbar_textdraw1] = CreatePlayerTextDraw(playerid, x, y, "_");
+	PlayerTextDrawUseBox		(playerid, in_t, 1);
+	PlayerTextDrawTextSize		(playerid, in_t, x + width, 0.0);
+	PlayerTextDrawLetterSize	(playerid, in_t, 1.0, height / 10);
+	PlayerTextDrawBoxColor		(playerid, in_t, 0x00000000 | (color & 0x000000FF));
 
-	in_t = Bars[barid][pb_t2] = TextDrawCreate(x + 1.2, y + 2.15, "_");
-	TextDrawUseBox		(in_t, 1);
-	TextDrawTextSize	(in_t, x + width - 2.0, 0.0);
-	TextDrawLetterSize	(in_t, 1.0, height / 10 - 0.35);
-	TextDrawBoxColor	(in_t, (color & 0xFFFFFF00) | (0x66 & ((color & 0x000000FF) / 2)));
+	in_t = PlayerBarText[barid][pbar_textdraw2] = CreatePlayerTextDraw(playerid, x + 1.2, y + 2.15, "_");
+	PlayerTextDrawUseBox		(playerid, in_t, 1);
+	PlayerTextDrawTextSize		(playerid, in_t, x + width - 2.0, 0.0);
+	PlayerTextDrawLetterSize	(playerid, in_t, 1.0, height / 10 - 0.35);
+	PlayerTextDrawBoxColor		(playerid, in_t, (color & 0xFFFFFF00) | (0x66 & ((color & 0x000000FF) / 2)));
 
-	in_t = Bars[barid][pb_t3] = TextDrawCreate(x + 1.2, y + 2.15, "_");
-	TextDrawTextSize	(in_t, pb_percent(x, width, max, 1.0), 0.0);
-	TextDrawLetterSize	(in_t, 1.0, height / 10 - 0.35);
-	TextDrawBoxColor	(in_t, color);
+	in_t = PlayerBarText[barid][pbar_textdraw3] = CreatePlayerTextDraw(playerid, x + 1.2, y + 2.15, "_");
+	PlayerTextDrawTextSize		(playerid, in_t, pb_percent(x, width, max, 1.0), 0.0);
+	PlayerTextDrawLetterSize	(playerid, in_t, 1.0, height / 10 - 0.35);
+	PlayerTextDrawBoxColor		(playerid, in_t, color);
 
-	Bars[barid][pb_x] = x;
-	Bars[barid][pb_y] = y;
-	Bars[barid][pb_w] = width;
-	Bars[barid][pb_h] = height;
-	Bars[barid][pb_m] = max;
-	Bars[barid][pb_color] = color;
-	Bars[barid][pb_created] = true;
-	return Bar:barid;
+	PlayerBars[playerid][barid][pbar_x] = x;
+	PlayerBars[playerid][barid][pbar_y] = y;
+	PlayerBars[playerid][barid][pbar_w] = width;
+	PlayerBars[playerid][barid][pbar_h] = height;
+	PlayerBars[playerid][barid][pbar_m] = max;
+	PlayerBars[playerid][barid][pbar_colour] = color;
+	PlayerBars[playerid][barid][pbar_valid] = true;
+	return PlayerBar:barid;
 }
 
-stock DestroyProgressBar(Bar:barid)
+stock DestroyPlayerProgressBar(playerid, PlayerBar:barid)
 {
-	if(barid != INVALID_BAR_ID && Bar:-1 < barid < Bar:MAX_BARS)
+	if(barid != INVALID_PLAYER_BAR_ID && PlayerBar:-1 < barid < PlayerBar:MAX_PLAYER_BARS)
 	{
-		if(!Bars[_:barid][pb_created])
+		if(!PlayerBars[playerid][_:barid][pbar_valid])
 			return 0;
 
-		TextDrawDestroy(Bars[_:barid][pb_t1]);
-		TextDrawDestroy(Bars[_:barid][pb_t2]);
-		TextDrawDestroy(Bars[_:barid][pb_t3]);
+		PlayerTextDrawDestroy(playerid, PlayerBarText[_:barid][pbar_textdraw1]);
+		PlayerTextDrawDestroy(playerid, PlayerBarText[_:barid][pbar_textdraw2]);
+		PlayerTextDrawDestroy(playerid, PlayerBarText[_:barid][pbar_textdraw3]);
 
-		Bars[_:barid][pb_t1] = Text:0;       
-		Bars[_:barid][pb_t2] = Text:0;       
-		Bars[_:barid][pb_t3] = Text:0;
-		Bars[_:barid][pb_x] = 0.0;
-		Bars[_:barid][pb_y] = 0.0;
-		Bars[_:barid][pb_w] = 0.0;
-		Bars[_:barid][pb_h] = 0.0;
-		Bars[_:barid][pb_m] = 0.0;
-		Bars[_:barid][pb_v] = 0.0;
-		Bars[_:barid][pb_color] = 0;
-		Bars[_:barid][pb_created] = false;
+		PlayerBars[playerid][_:barid][pbar_x] = 0.0;
+		PlayerBars[playerid][_:barid][pbar_y] = 0.0;
+		PlayerBars[playerid][_:barid][pbar_w] = 0.0;
+		PlayerBars[playerid][_:barid][pbar_h] = 0.0;
+		PlayerBars[playerid][_:barid][pbar_m] = 0.0;
+		PlayerBars[playerid][_:barid][pbar_v] = 0.0;
+		PlayerBars[playerid][_:barid][pbar_colour] = 0;
+		PlayerBars[playerid][_:barid][pbar_valid] = false;
 		return 1;
 	}
 	return 0;
 }
 
-stock ShowProgressBarForPlayer(playerid, Bar:barid)
+stock ShowPlayerProgressBar(playerid, PlayerBar:barid)
 {
-	if(IsPlayerConnected(playerid) && barid != INVALID_BAR_ID && Bar:-1 < barid < Bar:MAX_BARS)
+	if(IsPlayerConnected(playerid) && barid != INVALID_PLAYER_BAR_ID && PlayerBar:-1 < barid < PlayerBar:MAX_PLAYER_BARS)
 	{
-		if(!Bars[_:barid][pb_created])
+		if(!PlayerBars[playerid][_:barid][pbar_valid])
 			return 0;
 
-		TextDrawShowForPlayer(playerid, Bars[_:barid][pb_t1]);
-		TextDrawShowForPlayer(playerid, Bars[_:barid][pb_t2]);
-		TextDrawShowForPlayer(playerid, Bars[_:barid][pb_t3]);
+		PlayerTextDrawShow(playerid, PlayerBarText[_:barid][pbar_textdraw1]);
+		PlayerTextDrawShow(playerid, PlayerBarText[_:barid][pbar_textdraw2]);
+		PlayerTextDrawShow(playerid, PlayerBarText[_:barid][pbar_textdraw3]);
 		return 1;
 	}
 	return 0;
 }
 
-stock HideProgressBarForPlayer(playerid, Bar:barid)
+stock HidePlayerProgressBar(playerid, PlayerBar:barid)
 {
-	if(IsPlayerConnected(playerid) && barid != INVALID_BAR_ID && Bar:-1 < barid < Bar:MAX_BARS)
+	if(IsPlayerConnected(playerid) && barid != INVALID_PLAYER_BAR_ID && PlayerBar:-1 < barid < PlayerBar:MAX_PLAYER_BARS)
 	{
-		if(!Bars[_:barid][pb_created])
+		if(!PlayerBars[playerid][_:barid][pbar_valid])
 			return 0;
 
-		TextDrawHideForPlayer(playerid, Bars[_:barid][pb_t1]);
-		TextDrawHideForPlayer(playerid, Bars[_:barid][pb_t2]);
-		TextDrawHideForPlayer(playerid, Bars[_:barid][pb_t3]);
+		PlayerTextDrawHide(playerid, PlayerBarText[_:barid][pbar_textdraw1]);
+		PlayerTextDrawHide(playerid, PlayerBarText[_:barid][pbar_textdraw2]);
+		PlayerTextDrawHide(playerid, PlayerBarText[_:barid][pbar_textdraw3]);
 		return 1;
 	}
 	return 0;
 }
 
-stock SetProgressBarValue(Bar:barid, Float:value)
+stock SetPlayerProgressBarValue(playerid, PlayerBar:barid, Float:value)
 {
-	if(barid == INVALID_BAR_ID || Bar:MAX_BARS < barid < Bar:-1)
+	if(barid == INVALID_PLAYER_BAR_ID || PlayerBar:MAX_PLAYER_BARS < barid < PlayerBar:-1)
 		return 0;
 
-	if(Bars[_:barid][pb_created])
+	if(PlayerBars[playerid][_:barid][pbar_valid])
 	{
 		value =
-			(value < 0.0) ? (0.0) : (value > Bars[_:barid][pb_m]) ? (Bars[_:barid][pb_m]) : (value);
+			(value < 0.0) ? (0.0) : (value > PlayerBars[playerid][_:barid][pbar_m]) ? (PlayerBars[playerid][_:barid][pbar_m]) : (value);
 
-		TextDrawUseBox(Bars[_:barid][pb_t3], value > 0.0);
+		PlayerTextDrawUseBox(playerid, PlayerBarText[_:barid][pbar_textdraw3], value > 0.0);
 
-        Bars[_:barid][pb_v] = value;
+        PlayerBars[playerid][_:barid][pbar_v] = value;
 
-		TextDrawTextSize(Bars[_:barid][pb_t3],
-			pb_percent(Bars[_:barid][pb_x], Bars[_:barid][pb_w], Bars[_:barid][pb_m], value), 0.0);
-
+		PlayerTextDrawTextSize(playerid, PlayerBarText[_:barid][pbar_textdraw3],
+			pb_percent(PlayerBars[playerid][_:barid][pbar_x], PlayerBars[playerid][_:barid][pbar_w], PlayerBars[playerid][_:barid][pbar_m], value), 0.0);
+		HidePlayerProgressBar(playerid, PlayerBar:barid);
+		ShowPlayerProgressBar(playerid, PlayerBar:barid);
 		return 1;
 	}
 	return 0;
 }
 
-stock Float:GetProgressBarValue(Bar:barid)
+stock Float:GetPlayerProgressBarValue(playerid, PlayerBar:barid)
 {
-	if(barid == INVALID_BAR_ID || Bar:MAX_BARS < barid < Bar:-1)
-		return INVALID_BAR_VALUE;
+	if(barid == INVALID_PLAYER_BAR_ID || PlayerBar:MAX_PLAYER_BARS < barid < PlayerBar:-1)
+		return INVALID_PLAYER_BAR_VALUE;
 
-	if(Bars[_:barid][pb_created])
-		return Bars[_:barid][pb_v];
+	if(PlayerBars[playerid][_:barid][pbar_valid])
+		return PlayerBars[playerid][_:barid][pbar_v];
 
-	return INVALID_BAR_VALUE; 
+	return INVALID_PLAYER_BAR_VALUE;
 }
 
-stock SetProgressBarMaxValue(Bar:barid, Float:max)
+stock SetPlayerProgressBarMaxValue(playerid, PlayerBar:barid, Float:max)
 {
-	if(barid == INVALID_BAR_ID || Bar:MAX_BARS < barid < Bar:-1)
+	if(barid == INVALID_PLAYER_BAR_ID || PlayerBar:MAX_PLAYER_BARS < barid < PlayerBar:-1)
 		return 0;
 
-	if(Bars[_:barid][pb_created])
+	if(PlayerBars[playerid][_:barid][pbar_valid])
 	{
-		Bars[_:barid][pb_m] = max;
-		SetProgressBarValue(barid, Bars[_:barid][pb_v]);
+		PlayerBars[playerid][_:barid][pbar_m] = max;
+		SetPlayerProgressBarValue(playerid, barid, PlayerBars[playerid][_:barid][pbar_v]);
 		return 1;
 	}
 	return 0;
 }
 
-stock SetProgressBarColor(Bar:barid, color)
+stock SetPlayerProgressBarColor(playerid, PlayerBar:barid, color)
 {
-	if(barid == INVALID_BAR_ID || Bar:MAX_BARS < barid < Bar:-1)
+	if(barid == INVALID_PLAYER_BAR_ID || PlayerBar:MAX_PLAYER_BARS < barid < PlayerBar:-1)
 		return 0;
 
-	if(Bars[_:barid][pb_created])
+	if(PlayerBars[playerid][_:barid][pbar_valid])
 	{	
-		Bars[_:barid][pb_color] = color;
-		TextDrawBoxColor(Bars[_:barid][pb_t1], 0x00000000 | (color & 0x000000FF));
+		PlayerBars[playerid][_:barid][pbar_colour] = color;
+		PlayerTextDrawBoxColor(playerid, PlayerBarText[_:barid][pbar_textdraw1], 0x00000000 | (color & 0x000000FF));
 
-		TextDrawBoxColor(Bars[_:barid][pb_t2],
+		PlayerTextDrawBoxColor(playerid, PlayerBarText[_:barid][pbar_textdraw2],
 			(color & 0xFFFFFF00) | (0x66 & ((color & 0x000000FF) / 2)));
 
-		TextDrawBoxColor(Bars[_:barid][pb_t3], color);
+		PlayerTextDrawBoxColor(playerid, PlayerBarText[_:barid][pbar_textdraw3], color);
 		return 1;
 	}
 	return 0;
 }
 
-stock ShowProgressBarForAll(Bar:barid)
+stock UpdatePlayerProgressBar(playerid, PlayerBar:barid)
 {
-	#if defined _foreach_included
-	foreach(Player, i)
-	#else
-	for(new i = 0; i < MAX_PLAYERS; ++i)
-		if(IsPlayerConnected(i))
-	#endif
-	#if defined IsPlayerNPC
-		if(!IsPlayerNPC(i))
-	#endif
-	{
-		ShowProgressBarForPlayer(i, barid);
-	}
-	return 1;
-}
-
-stock HideProgressBarForAll(Bar:barid)
-{
-	#if defined _foreach_included
-	foreach(Player, i)
-	#else
-	for(new i = 0; i < MAX_PLAYERS; ++i)
-		if(IsPlayerConnected(i))
-	#endif
-	#if defined IsPlayerNPC
-		if(!IsPlayerNPC(i))
-	#endif
-	{
-		HideProgressBarForPlayer(i, barid);
-	}
-	return 1;
-}
-
-stock UpdateProgressBar(Bar:barid, playerid=INVALID_PLAYER_ID)
-{
-	if(playerid == INVALID_PLAYER_ID)
-	{
-		return ShowProgressBarForAll(barid);
-	} else {
-		return ShowProgressBarForPlayer(playerid, barid);
-	}
+	return ShowPlayerProgressBar(playerid, barid);
 }

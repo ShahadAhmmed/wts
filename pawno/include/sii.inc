@@ -1,23 +1,22 @@
 //======================================================
-// Slick's INI Include 2.0.6
+// Slick's INI Include 2.0.7
 //
-// (c) Copyright 2008-2009, [DRuG]Slick
+// (c) Copyright 2008-2010, [DRuG]Slick
 // This file is provided as is (no warranties).
 //======================================================
 
 
-#pragma dynamic 25000 // Change accordingly!!
-
+#pragma dynamic 45000 // Change accordingly!!
 
 #if defined MAX_STRING
 	#define INI_MAX_VALUE MAX_STRING
 #else
-	#define INI_MAX_VALUE 128
+	#define INI_MAX_VALUE 256
 #endif
 #define INI_MAX_KEY 24
 #define INI_MAX_LINE (INI_MAX_KEY + INI_MAX_VALUE + 3)
 #define INI_MAX_FILENAME 256
-#define INI_MAX_LINES 128
+#define INI_MAX_LINES 768
 
 
 enum E_CACHE
@@ -47,7 +46,8 @@ stock INI_Open(const filename[])
 	if (gFile[E_OPEN])
 	{
 		if (!strcmp(gFile[E_FILENAME], filename, true)) return true;
-		return false;
+		//return false;
+		INI_Close();
 	}
 	new File: h;
 	h = fopen(filename, io_readwrite);
@@ -70,7 +70,7 @@ stock INI_Open(const filename[])
 				}
 				else
 				{
-					INI_strcpy(gCache[ln][E_VALUE][1], line, INI_MAX_VALUE, INI_MAX_VALUE);
+					INI_strcpy(gCache[ln][E_VALUE][1], line, INI_MAX_VALUE - 1, INI_MAX_VALUE - 1);
 					gCache[ln][E_VALUE][0] = ';';
 				}
 				continue;
@@ -128,17 +128,6 @@ stock INI_Close()
 	return true;
 }
 
-stock INI_Create(filename[]) {
-	if (fexist(filename)) return false;
-	new File:fhnd;
-	fhnd=fopen(filename,io_write);
-	if (fhnd) {
-		fclose(fhnd);
-		return true;
-	}
-	return false;
-}
-
 
 stock INI_ReadString(dest[], const key[], maxlength = sizeof(dest))
 {
@@ -160,7 +149,7 @@ stock INI_ReadString(dest[], const key[], maxlength = sizeof(dest))
 
 stock INI_ReadInt(const key[])
 {
-	new dest[11];
+	new dest[12];
 	if (INI_ReadString(dest, key)) return strval(dest);
 	return false;
 }
@@ -168,7 +157,7 @@ stock INI_ReadInt(const key[])
 
 stock Float: INI_ReadFloat(const key[])
 {
-	new dest[11];
+	new dest[12];
 	if (INI_ReadString(dest, key)) return floatstr(dest);
 	return 0.0;
 }
@@ -201,7 +190,7 @@ stock INI_WriteString(const key[], const value[])
 
 stock INI_WriteInt(const key[], value)
 {
-	new dest[11];
+	new dest[12];
 	format(dest, sizeof(dest), "%i", value);
 	return INI_WriteString(key, dest);
 }
@@ -209,7 +198,7 @@ stock INI_WriteInt(const key[], value)
 
 stock INI_WriteFloat(const key[], Float: value)
 {
-	new dest[11];
+	new dest[12];
 	format(dest, sizeof(dest), "%0.4f", value);
 	return INI_WriteString(key, dest);
 }

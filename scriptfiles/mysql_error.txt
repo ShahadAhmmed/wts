@@ -1,0 +1,216 @@
+[2020-08-13 10:02]
+Error ID: 1064
+Callback: OnPlayerUseCarStorage
+Query: SELECT id FROM vehicles WHERE ownerid = 8 LIMIT -1, 1
+[!] You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1, 1' at line 1
+
+[2020-08-13 11:57]
+Error ID: 1064
+Callback: OnPlayerUseCarStorage
+Query: SELECT id FROM vehicles WHERE ownerid = 12 LIMIT -1, 1
+[!] You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1, 1' at line 1
+
+[2020-08-13 17:05]
+Error ID: 1064
+Callback: OnPlayerUseCarStorage
+Query: SELECT id FROM vehicles WHERE ownerid = 12 LIMIT -1, 1
+[!] You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1, 1' at line 1
+
+[2020-08-14 00:52]
+Error ID: 1064
+Callback: OnPlayerUseCarStorage
+Query: SELECT id FROM vehicles WHERE ownerid = 10 LIMIT -1, 1
+[!] You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1, 1' at line 1
+
+[2020-08-14 01:07]
+Error ID: 1064
+Callback: 
+Query: UPDATE businesses SET name = 'Astro's Clothings' WHERE id = 6
+[!] You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's Clothings' WHERE id = 6' at line 1
+
+[2020-08-14 01:11]
+Error ID: 1064
+Callback: 
+Query: UPDATE businesses SET name = '[FF0000]Astro's Clothing' WHERE id = 6
+[!] You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's Clothing' WHERE id = 6' at line 1
+
+[2020-08-14 01:12]
+Error ID: 1064
+Callback: 
+Query: UPDATE businesses SET name = '[FF0000]Astro's Clothing' WHERE id = 6
+[!] You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's Clothing' WHERE id = 6' at line 1
+
+[2020-08-14 01:13]
+Error ID: 1064
+Callback: 
+Query: UPDATE businesses SET name = '[FF0000F]Astro's Clothing' WHERE id = 6
+[!] You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's Clothing' WHERE id = 6' at line 1
+
+[2020-08-14 01:16]
+Error ID: 1064
+Callback: 
+Query: UPDATE businesses SET name = '[#FF0000]Astro's Clothing' WHERE id = 6
+[!] You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's Clothing' WHERE id = 6' at line 1
+
+[2020-08-14 01:16]
+Error ID: 1064
+Callback: 
+Query: UPDATE businesses SET name = '[FFFFFF]Astro's Clothing' WHERE id = 6
+[!] You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's Clothing' WHERE id = 6' at line 1
+
+[2020-08-14 01:16]
+Error ID: 1064
+Callback: 
+Query: UPDATE businesses SET name = 'Astro's Clothing' WHERE id = 6
+[!] You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's Clothing' WHERE id = 6' at line 1
+
+[2020-08-15 09:50]
+Error ID: 1064
+Callback: OnPlayerUseCarStorage
+Query: SELECT id FROM vehicles WHERE ownerid = 11 LIMIT -1, 1
+[!] You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1, 1' at line 1
+
+[2020-08-15 09:53]
+Error ID: 1064
+Callback: OnPlayerUseCarStorage
+Query: SELECT id FROM vehicles WHERE ownerid = 11 LIMIT -1, 1
+[!] You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1, 1' at line 1
+
+[2020-08-17 15:07]
+Error ID: 1064
+Callback: OnPlayerUseCarStorage
+Query: SELECT id FROM vehicles WHERE ownerid = 60 LIMIT -1, 1
+[!] You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1, 1' at line 1
+
+[2020-08-17 19:38]
+Error ID: 1064
+Callback: 
+Query: UPDATE businesses SET name = 'Astro's Clothing' WHERE id = 6
+[!] You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 's Clothing' WHERE id = 6' at line 1
+
+[2020-08-20 17:18]
+Error ID: 1064
+Callback: OnPlayerUseCarStorage
+Query: SELECT id FROM vehicles WHERE ownerid = 105 LIMIT -1, 1
+[!] You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1, 1' at line 1
+
+[2020-08-20 19:32]
+Error ID: 1064
+Callback: OnPlayerUseCarStorage
+Query: SELECT id FROM vehicles WHERE ownerid = 69 LIMIT -1, 1
+[!] You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1, 1' at line 1
+
+[2020-08-22 15:53]
+Error ID: 1054
+Callback: 
+Query: UPDATE businesses SET robbed = 3, robbing = 0 WHERE id = 28
+[!] Unknown column 'robbing' in 'field list'
+
+[2020-08-23 19:36]
+Error ID: 1064
+Callback: OnPlayerUseCarStorage
+Query: SELECT id FROM vehicles WHERE ownerid = 6 LIMIT -1, 1
+[!] You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1, 1' at line 1
+
+[2020-08-24 10:05]
+Error ID: 1064
+Callback: OnPlayerUseCarStorage
+Query: SELECT id FROM vehicles WHERE ownerid = 26 LIMIT -1, 1
+[!] You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1, 1' at line 1
+
+[2020-08-24 17:39]
+Error ID: 1064
+Callback: OnPlayerUseCarStorage
+Query: SELECT id FROM vehicles WHERE ownerid = 11 LIMIT -1, 1
+[!] You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1, 1' at line 1
+
+[2020-08-24 19:49]
+Error ID: 1054
+Callback: 
+Query: UPDATE businesses SET robbed = 3, robbing = 0 WHERE id = 6
+[!] Unknown column 'robbing' in 'field list'
+
+[2020-08-24 20:06]
+Error ID: 1054
+Callback: 
+Query: UPDATE businesses SET robbed = 3, robbing = 0 WHERE id = 25
+[!] Unknown column 'robbing' in 'field list'
+
+[2020-08-26 17:12]
+Error ID: 1064
+Callback: OnPlayerUseCarStorage
+Query: SELECT id FROM vehicles WHERE ownerid = 26 LIMIT -1, 1
+[!] You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1, 1' at line 1
+
+[2020-09-04 01:06]
+Error ID: 1054
+Callback: 
+Query: UPDATE businesses SET robbed = 3, robbing = 0 WHERE id = 4
+[!] Unknown column 'robbing' in 'field list'
+
+[2020-09-04 13:14]
+Error ID: 1146
+Callback: 
+Query: INSERT INTO vehicles (modelid, pos_x, pos_y, pos_z, pos_a, color1, color2, gangid, factiontype, respawndelay) VALUES(522, '1192.228', '-1323.474', '12.967', '355.96', 2, 2, 0, 1, 0)
+[!] Table 'server_4684_pcrp.vehicles' doesn't exist
+
+[2020-09-04 13:14]
+Error ID: 1146
+Callback: OnQueryFinished
+Query: SELECT * FROM vehicles WHERE id = LAST_INSERT_ID()
+[!] Table 'server_4684_pcrp.vehicles' doesn't exist
+
+[2020-09-04 13:15]
+Error ID: 1146
+Callback: OnQueryFinished
+Query: SELECT id, modelid, pos_x, pos_y, pos_z, world FROM vehicles WHERE ownerid = 13
+[!] Table 'server_4684_pcrp.vehicles' doesn't exist
+
+[2020-09-04 13:15]
+Error ID: 1146
+Callback: OnQueryFinished
+Query: SELECT id, modelid, pos_x, pos_y, pos_z, world FROM vehicles WHERE ownerid = 13
+[!] Table 'server_4684_pcrp.vehicles' doesn't exist
+
+[2020-09-04 13:16]
+Error ID: 1146
+Callback: OnQueryFinished
+Query: SELECT id, modelid, pos_x, pos_y, pos_z, world FROM vehicles WHERE ownerid = 51
+[!] Table 'server_4684_pcrp.vehicles' doesn't exist
+
+[2020-09-04 13:16]
+Error ID: 1146
+Callback: OnQueryFinished
+Query: SELECT id, modelid, pos_x, pos_y, pos_z, world FROM vehicles WHERE ownerid = 168
+[!] Table 'server_4684_pcrp.vehicles' doesn't exist
+
+[2020-09-04 13:16]
+Error ID: 1146
+Callback: OnQueryFinished
+Query: SELECT id, modelid, pos_x, pos_y, pos_z, world FROM vehicles WHERE ownerid = 168
+[!] Table 'server_4684_pcrp.vehicles' doesn't exist
+
+[2020-09-04 13:16]
+Error ID: 1146
+Callback: OnQueryFinished
+Query: SELECT id, modelid, pos_x, pos_y, pos_z, world FROM vehicles WHERE ownerid = 168
+[!] Table 'server_4684_pcrp.vehicles' doesn't exist
+
+[2020-09-04 13:16]
+Error ID: 1146
+Callback: OnQueryFinished
+Query: SELECT id, modelid, pos_x, pos_y, pos_z, world FROM vehicles WHERE ownerid = 13
+[!] Table 'server_4684_pcrp.vehicles' doesn't exist
+
+[2020-09-04 13:18]
+Error ID: 1146
+Callback: OnQueryFinished
+Query: SELECT id, modelid, pos_x, pos_y, pos_z, world FROM vehicles WHERE ownerid = 168
+[!] Table 'server_4684_pcrp.vehicles' doesn't exist
+
+[2020-09-04 13:18]
+Error ID: 1146
+Callback: OnQueryFinished
+Query: SELECT id, modelid, pos_x, pos_y, pos_z, world FROM vehicles WHERE ownerid = 168
+[!] Table 'server_4684_pcrp.vehicles' doesn't exist
+
