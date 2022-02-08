@@ -73,15 +73,15 @@
 
 // Second Host ITO GAMITIN MO TOL
 #if defined DEBUG
-	#define MYSQL_HOSTNAME  "5.9.8.124"
-	#define MYSQL_DATABASE  "s88813_my-db1617336919"
-	#define MYSQL_USERNAME  "u88813_52eGfvAdRq"
-	#define MYSQL_PASSWORD  "sMCgqBj.pPzLaw@+8657sBiK"
+	#define MYSQL_HOSTNAME  "localhost"
+    #define MYSQL_DATABASE  "shahad"
+    #define MYSQL_USERNAME  "Shahad"
+    #define MYSQL_PASSWORD  "shahad@123"
 #else
-	#define MYSQL_HOSTNAME  "5.9.8.124"
-	#define MYSQL_DATABASE  "s88813_my-db1617336919"
-	#define MYSQL_USERNAME  "u88813_52eGfvAdRq"
-	#define MYSQL_PASSWORD  "sMCgqBj.pPzLaw@+8657sBiK"
+    #define MYSQL_HOSTNAME  "localhost"
+    #define MYSQL_DATABASE  "shahad"
+    #define MYSQL_USERNAME  "Shahad"
+    #define MYSQL_PASSWORD  "shahad@123"
 #endif
 
 #define SERVER_MUSIC_URL ""SERVER_URL"/music"
